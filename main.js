@@ -13,7 +13,8 @@ define(function (require, exports, module) {
 
     // Enable formatting plugin of CodeMirror2 (this plugin is default contained)
     var script = document.createElement("script");
-    script.src = "thirdparty/CodeMirror2/lib/util/search.js";
+    script.src = "thirdparty/CodeMirror2/lib/util/formatting.js";
+    document.head.appendChild(script);
 
     CommandManager.register("Format", COMMAND_ID, autoFormat);
     function autoFormat() {
